@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply bg-gray-50 text-gray-800 font-sans;
+    }
+
     h1 {
         @apply text-4xl font-bold tracking-tight sm:text-5xl;
     }
 
     h2 {
         @apply text-2xl font-bold sm:text-3xl;
+    }
+
+    h3 {
+        @apply text-xl font-bold sm:text-2xl;
     }
 
     a {
@@ -20,7 +28,7 @@
     }
 
     :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-[#1f1f1f] text-[#F67280];
+        @apply px-1 py-0.5 font-mono rounded bg-gray-800 text-pink-500;
         font-size: 0.9em;
     }
 }
@@ -44,29 +52,19 @@
         @apply mb-0;
     }
 
-    .btn:disabled {
-        @apply text-neutral-400 bg-neutral-700;
+    .btn {
+        @apply bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200;
     }
 
-    
-}
+    .btn:disabled {
+        @apply text-neutral-400 bg-neutral-700 cursor-not-allowed;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
+    input {
+        @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
 
-h1, h2, h3 {
-  color: #333;
+    textarea {
+        @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
 }
-
-input {
-  font-size: 16px;
-}
-
-button {
-  cursor: pointer;
-}
-
