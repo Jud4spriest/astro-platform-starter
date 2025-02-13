@@ -1,0 +1,59 @@
+---
+import Button from '../components/Button.astro'; // Exemplo de componente botão
+import Footer from '../components/Footer.astro'; // Reutilizando o rodapé
+---
+
+<html lang="en">
+  <head>
+    <title>Landing Page de Alta Conversão</title>
+    <meta name="description" content="Converta mais leads com a nossa solução otimizada. Aproveite agora!">
+  </head>
+  <body>
+    <header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center py-8">
+      <h1 class="text-4xl font-bold mb-4">Transforme Seu Negócio Agora!</h1>
+      <p class="text-lg">Soluções personalizadas para impulsionar suas conversões.</p>
+    </header>
+    
+    <main class="p-8 max-w-4xl mx-auto">
+      <!-- Benefício Principal -->
+      <section class="text-center my-8">
+        <h2 class="text-2xl font-bold mb-4">Descubra o segredo para atrair mais clientes</h2>
+        <p class="text-lg">Com nossa ferramenta, você irá alcançar seus objetivos com eficiência e simplicidade.</p>
+      </section>
+      
+      <!-- Formulário de Captura -->
+      <section class="bg-gray-100 p-6 rounded-lg shadow-md text-center my-8">
+        <h3 class="text-xl font-bold mb-4">Receba nossa solução gratuita no seu email</h3>
+        <form action="/submit-form" method="POST" class="space-y-4">
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite seu melhor email"
+            required
+            class="w-full p-3 border border-gray-300 rounded-lg"
+          />
+          <Button text="Quero Receber" />
+        </form>
+      </section>
+
+      <!-- Prova Social -->
+      <section class="my-8">
+        <h3 class="text-2xl font-bold text-center mb-6">Veja o que nossos clientes dizem</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <blockquote class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            "Consegui triplicar minhas conversões! Recomendo a todos!" - João Silva
+          </blockquote>
+          <blockquote class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            "Nunca foi tão fácil atrair novos clientes. Essa ferramenta é incrível!" - Ana Lima
+          </blockquote>
+          <blockquote class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            "Resultados impressionantes em apenas uma semana!" - Carlos Mendes
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <Footer />
+  </body>
+</html>
